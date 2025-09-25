@@ -57,6 +57,7 @@
 // });
 
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+import satsun from './util/isWeekend.js';
 
 const today = dayjs();
 // const nextMonth = today.add(1, 'month');
@@ -65,17 +66,4 @@ const today = dayjs();
 
 // console.log(nextMonthFormatted);
 
-function isWeekend(date){
-    
-    const today = date;
-    const nextDay = today.add(3, 'd');
-    const nextDayFormatted = nextDay.format('dddd');
-
-    if(nextDayFormatted == 'Saturday' || nextDayFormatted == 'Sunday'){
-        return true;
-    }    
-
-    return false;
-}
-
-console.log(isWeekend(today));
+console.log(satsun(today));
